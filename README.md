@@ -1,2 +1,2 @@
 # Portfolio-Java
-Portfolio dos meus projetos em Java Desktop
+Portfolio do meu projeto em Java Desktop
