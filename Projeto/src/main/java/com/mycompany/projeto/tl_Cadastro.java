@@ -199,19 +199,19 @@ public class tl_Cadastro extends javax.swing.JFrame {
         
         String insereUsuario = "call InsertUsuario('"+usuario+"','"+senha+"','"+email+"');";
         String buscaEmail = "select nomeUsuario,email from usuarios where email = '"+email+"';";
+        String buscaUsuario = "select nomeUsuario,email from usuarios where nomeUsuario = '"+usuario+"';";
         
         
         MySQLConnection con = new MySQLConnection();
         FuncoesSQL funcoesSQL = new FuncoesSQL();
         
-        
         con.getConnection();
         funcoesSQL.execute(buscaEmail);
-        
-
         if(funcoesSQL.rowCount == 0 && !"".equals(email))
         {   
-            if(!"".equals(usuario))
+            funcoesSQL.setRowCount(0);
+            funcoesSQL.execute(buscaUsuario);
+            if(funcoesSQL.rowCount == 0 && !"".equals(usuario))
             {
                 if(senha.equals(confSenha) && !"".equals(senha))
                 {
@@ -226,7 +226,7 @@ public class tl_Cadastro extends javax.swing.JFrame {
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "O usuário nao foi informado!!.", "Usuário nao informado.", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Este nome de usuario já está cadastrado ou é vazio!", "Usuário", JOptionPane.INFORMATION_MESSAGE);
             }
 
         }

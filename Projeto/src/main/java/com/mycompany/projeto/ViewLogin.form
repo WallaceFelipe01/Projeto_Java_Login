@@ -57,17 +57,17 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTF_Usuario" max="32767" attributes="0"/>
-                              <Component id="campoSenha" pref="106" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
                           <Component id="jButton1" min="-2" pref="99" max="-2" attributes="0"/>
                           <EmptySpace pref="68" max="32767" attributes="0"/>
                           <Component id="btn_Cadastrar" min="-2" pref="99" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jTF_Usuario" pref="120" max="32767" attributes="0"/>
+                              <Component id="campoSenha" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
